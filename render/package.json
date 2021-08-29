@@ -1,0 +1,90 @@
+{
+  "name": "template-global-js",
+  "version": "0.0.1",
+  "description": "项目模板",
+  "scripts": {
+    "dev": "webpack-dev-server --config build/webpack.dev.js --open",
+    "build": "webpack --config build/webpack.prod.js --progress",
+    "lint": "eslint --ext .js --ext .tjsx src",
+    "lint--fix": "npm run lint -- --fix"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "zhaowei",
+    "email": "zhaow@shinemo.com"
+  },
+  "browserslist": [
+    ">1%",
+    "ie>9"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-decorators": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-emotion": "^10.0.33",
+    "babel-plugin-import": "^1.13.0",
+    "babel-runtime": "^6.26.0",
+    "classnames": "^2.2.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.2.1",
+    "esc-ui": "^2.0.27",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.5",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-markdown": "^2.0.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unicorn": "^28.0.2",
+    "file-loader": "^6.0.0",
+    "hard-source-webpack-plugin": "^0.13.1",
+    "html-webpack-plugin": "^4.3.0",
+    "husky": "^5.1.3",
+    "less": "^3.13.1",
+    "less-loader": "^6.2.0",
+    "moment-locales-webpack-plugin": "^1.2.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2",
+    "styled-components": "^5.2.1"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.1",
+    "@formily/antd": "^1.3.12",
+    "@formily/antd-components": "^1.3.12",
+    "@formily/react-shared-components": "^1.2.11",
+    "ahooks": "^2.9.6",
+    "antd": "^4.16.1",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.9.4",
+    "lodash": "^4.17.19",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-cache-route": "^1.11.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint"
+    }
+  }
+}

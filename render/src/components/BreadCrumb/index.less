@@ -1,0 +1,52 @@
+.bread-crumb {
+  padding: 0 20px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #ffffff;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+
+  position: sticky;
+  top: 0;
+  z-index: 9;
+
+  &__routes {
+    flex: 1;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    color: #262A30;
+    font-size: 16px;
+
+    height: 48px;
+    line-height: 48px;
+
+    .route {
+      position: relative;
+
+      a {
+        color: #959ba3;
+      }
+
+      &:not(:last-of-type) {
+        color: #959BA3;
+        font-size: 14px;
+        padding-right: 27px;
+
+        &:after {
+          position: absolute;
+          display: block;
+          margin: 0 10px;
+          top: 0;
+          right: 0;
+          content: '/';
+          color: #959BA3;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__extra {}
+}

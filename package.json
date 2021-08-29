@@ -1,0 +1,111 @@
+{
+  "name": "first-electron-app",
+  "version": "1.0.0",
+  "description": "my first electron app",
+  "private": true,
+  "main": "main.js",
+  "homepage": ".",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --debug || node scripts/start.js",
+    "pack": "electron-builder",
+    "build-icon": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
+    "release": "cross-env GH_TOKEN=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 electron-builder"
+  },
+  "author": "zhaowei",
+  "license": "ISC",
+  "repository": "https://github.com/zoeyFuture/first-electron-app.git",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "devDependencies": {
+    "electron": "^13.1.2",
+    "electron-builder": "^22.11.7",
+    "electron-icon-builder": "^2.0.1",
+    "iohook": "^0.9.3"
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.9",
+    "timer.js": "^1.0.4"
+  },
+  "build": {
+    "appId": "com.first.app",
+    "productName": "first-electron-app",
+    "copyright": "Copyright © 2021 zhaowei",
+    "publish": [
+      "github"
+    ],
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "electronDownload": {
+      "mirror": "https://npm.taobao.org/mirrors/electron/"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ],
+      "icon": "build/icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "language": "2052",
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "icon": "build/icons/icon.icns",
+      "iconSize": 100,
+      "contents": [
+        {
+          "x": 380,
+          "y": 180,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 180,
+          "type": "file"
+        }
+      ],
+      "window": {
+        "width": 540,
+        "height": 380
+      }
+    },
+    "files": [
+      "package.json",
+      "main.js",
+      "src/*/*"
+    ]
+  },
+  "iohook": {
+    "targets": [
+      "node-72",
+      "electron-85"
+    ],
+    "platforms": [
+      "win32",
+      "darwin",
+      "linux"
+    ],
+    "arches": [
+      "x64",
+      "ia32"
+    ]
+  }
+}
